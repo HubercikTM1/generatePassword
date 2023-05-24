@@ -1,0 +1,41 @@
+﻿<Window x:Class="generujHaslo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:generujHaslo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Background="#B0C4DE">
+    <Grid>
+        <GroupBox Header="Dane pracownika" Margin="33,30,414,41">
+            <Grid>
+                <Label Content="Imię" HorizontalAlignment="Left" Margin="33,48,0,264" Width="44"/>
+                <TextBox x:Name="imieInput" HorizontalAlignment="Left" Margin="170,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="33,108,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="nazwiskoInput" HorizontalAlignment="Left" Margin="170,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label Content="Stanowisko" HorizontalAlignment="Left" Margin="33,170,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="stanowiskoInput" HorizontalAlignment="Left" Margin="170,172,0,0" VerticalAlignment="Top" Width="120">
+                    <Label Content="Kierownik"/>
+                    <Label Content="Starszy programista"/>
+                    <Label Content="Młodszy programista"/>
+                    <Label Content="Tester"/>
+                </ComboBox>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Generowanie hasła" Margin="421,30,30,41">
+            <Grid>
+                <Label Content="Ile znaków?" HorizontalAlignment="Left" Margin="41,49,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="ileZnakow" HorizontalAlignment="Left" Margin="177,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <CheckBox x:Name="bigC" Content="Małe i wielkie litery" HorizontalAlignment="Left" Margin="41,102,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                <CheckBox x:Name="nums" Content="Cyfry" HorizontalAlignment="Left" Margin="41,140,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="specialDigits" Content="Znaki specjalne" HorizontalAlignment="Left" Margin="41,177,0,0" VerticalAlignment="Top"/>
+                <Button Content="Generuj hasło" HorizontalAlignment="Left" Margin="142,228,0,0" VerticalAlignment="Top" Background="#4682B4" Foreground="White" Click="Button_Click_1"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Zatwierdź" HorizontalAlignment="Left" Margin="302,406,0,0" VerticalAlignment="Top" Width="189" Background="#4682B4" Foreground="White" Click="Button_Click"/>
+
+    </Grid>
+</Window>
